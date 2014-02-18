@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<script src="scrollbar.js"></script>
+<script>
+
+window.addEventListener('load',function(){
+
+scrollBar('general');
+
+});
+
+</script>
+<style>
+
+	#general{
+		position:relative;
+		width:410px;
+		height:400px;
+		
+		background-color:grey;
+
+	}
+	.scrollable>p{
+		text-align:justify;
+
+	}
+	.scrollbar{
+		position:absolute;
+		right:0;
+		top:40px;
+		width:20px;
+		height:320px; /*Tamaño total de la scrollbar - (el tamaño de la barra de desplazamiento /2)*/
+	}
+	.scrollbar:after{
+		content:"";
+		position:absolute;
+		right:7px;
+		top:-20px;
+		height:360px;
+		width:4px;
+		background-color:black;
+	}
+
+	
+
+	.scrollbar-but{
+		position: absolute;
+		top: -20px;
+		right: 3px;
+		width: 13px;
+		height: 40px;
+		background-color: black;
+		z-index:1;
+		
+		
+
+	}
+	.scrollable{
+		width:380px;
+		height:400px;
+		
+		overflow:hidden;
+
+	}
+	
+</style>
+</head>
+
+
+<body>
+
+	<div id="general">
+	
+		<div class="scrollable">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac nulla eu diam lacinia sodales vitae a ipsum. Cras tempor eros turpis, eu bibendum velit bibendum vitae. In hac habitasse platea dictumst. Curabitur et vulputate ante. Praesent rutrum, odio commodo lobortis lacinia, metus leo eleifend quam, non laoreet arcu felis eget ante. Vestibulum ultrices molestie consequat. Integer id orci purus. Phasellus a neque eget sapien tempus tempor sed at mauris. Donec venenatis vitae velit in sagittis.</p>
+
+		<p>Duis fringilla justo et dui bibendum rutrum. Nullam vulputate facilisis risus, at molestie magna egestas eu. Nam tempor metus luctus egestas varius. Phasellus pulvinar lobortis sagittis. Ut ac elementum augue. Curabitur sodales scelerisque diam vitae mollis. Curabitur placerat sit amet urna a consequat. Nulla sed orci egestas augue pulvinar molestie in a velit. Praesent venenatis volutpat sapien at elementum. Donec sit amet tincidunt arcu, vitae lacinia nisi. Maecenas leo ante, placerat in velit at, pulvinar aliquam felis. Ut pharetra augue ut eros elementum accumsan. Pellentesque id ante placerat lacus aliquet suscipit.</p>
+
+		<p>In ut vulputate nibh. Fusce quis porttitor erat. Aenean suscipit erat est, sit amet porta mi auctor eu. Maecenas sagittis in eros vel placerat. Quisque odio nibh, commodo quis commodo sodales, pulvinar eget justo. Mauris aliquet velit nec eros tincidunt facilisis. Suspendisse rutrum augue neque, eu elementum augue accumsan a. Praesent et pharetra ante. Nulla ut magna faucibus, elementum nisi ut, tincidunt nibh. Donec eleifend turpis sed tortor dictum, tincidunt tincidunt ante ultricies. Nunc magna eros, elementum vitae leo non, rhoncus laoreet enim. Sed accumsan congue consequat.</p>
+
+		<p>Nam rutrum rutrum porta. Cras sodales turpis diam, et varius quam vestibulum eget. Sed in mollis ipsum. Ut interdum dui id arcu tempor, quis tempor risus tristique. Praesent risus nunc, varius quis nisi at, fringilla dapibus neque. Fusce hendrerit mauris sit amet congue pellentesque. Phasellus pharetra ac eros quis scelerisque. Nam id sollicitudin velit. Mauris dictum sem massa. Nunc aliquam posuere purus, nec sodales risus cursus a. Vivamus leo eros, vulputate sed risus et, bibendum pellentesque turpis.</p>
+
+		<p>Curabitur diam mauris, posuere non dignissim a, mattis et nunc. Curabitur semper blandit placerat. Vestibulum sed urna scelerisque, sagittis libero in, pharetra nisi. Aliquam consequat at felis quis vestibulum. Nullam sed nisl fringilla eros vestibulum accumsan in ut neque. Aenean tincidunt pellentesque dui, quis convallis ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+		</div>
+		<div class="scrollbar">
+			<div class="scrollbar-but"></div>
+		
+		</div>
+		
+		
+	</div>
+
+
+
+</body>
+
+
+</html>
