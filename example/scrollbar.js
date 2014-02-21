@@ -57,7 +57,7 @@ function scrollBar(scrollBoxId) {
 	function mouseMoveEvent(e){
 		var positionScrollBar = getElementTopLeft(scrollbar);
 		var posBottom = positionScrollBar.top + scrollbar.offsetHeight;
-		var clientY = e.clientY;
+		var clientY = e.pageY;//Current position in document
 		
 			if (clientY >= positionScrollBar.top && clientY <= posBottom){ //Check if the mouse is out of bounds
 				scrollable.scrollTop = (clientY - positionScrollBar.top) * multi;	
